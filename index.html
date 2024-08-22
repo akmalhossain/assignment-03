@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- font-awesome cnd   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwind and daisyUi CDN  and config-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,21 +18,79 @@
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                primary: '#abef5f',
+                background:'#f4f4f4',
+                dark1:'#212121',
+                dark2:'#494949',
+                dark3:'#737373',
+                dark4:'#1c1c1c',
+                lighter:'#e9e9e9',
               },
-
+              fontFamily:{
+                Manrope:'Manrope',
+              },
             },
           },
         }
       </script>
-
-
-
-
 </head>
-<body>
-    <header>
 
+<body class="font-Manrope">
+    <header class="container mx-auto px-5 xl:px-14 2xl:px-44 bg-white">
+       <!-- navigation bar start -->
+       <nav class="border border-red-500">
+        <div class="navbar  px-0">
+          <div class="navbar-start">
+            <div class="w-8 h-8 border border-lighter rounded-full bg-primary flex items-center justify-center mr-2">
+              <i class="fa-solid fa-arrow-right-long -rotate-45 text-dark1"></i>
+            </div> 
+            <a class="text-[28px] xl:text-[32px] font-extrabold text-dark1"> Rinterio</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
+              <li><a class="text-dark3 text-base">Service</a></li>
+              <li><a class="text-dark3 text-base">Portfolio</a></li>
+              <li><a class="text-dark3 text-base">Blogs</a></li>
+              <li><a class="text-dark3 text-base">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="hidden md:flex items-center bg-primary rounded-full py-3 px-5">
+              <a class="text-xl font-extrabold"> Book Consult</a>
+            <div class="w-8 h-8 border border-lighter rounded-full bg-dark4 flex items-center justify-center ml-2">
+              <i class="fa-solid fa-arrow-right-long -rotate-45 text-white"></i>
+            </div> 
+            </div>
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
+                <li><a class="text-dark3 text-base">Service</a></li>
+                <li><a class="text-dark3 text-base">Portfolio</a></li>
+                <li><a class="text-dark3 text-base">Blogs</a></li>
+                <li><a class="text-dark3 text-base">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       </nav>
+       <!-- navigation bar end -->
     </header>
     <main>
 
