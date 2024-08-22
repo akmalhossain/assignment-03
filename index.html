@@ -1,132 +1,277 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio</title>
-    <!-- google font manrope -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- font-awesome cnd   -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- tailwind and daisyUi CDN  and config-->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#abef5f',
-                primary2: 'rgba(171, 239, 95, 0.5)',
-                background:'#f4f4f4',
-                background2:'rgba(255, 255, 255, 0)',
-                dark1:'#212121',
-                dark2:'#494949',
-                dark3:'#737373',
-                dark4:'#1c1c1c',
-                lighter:'#e9e9e9',
-              },
-              fontFamily:{
-                Manrope:'Manrope',
-              },
-            },
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio</title>
+  <!-- google font manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- font-awesome cnd   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind and daisyUi CDN  and config-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#abef5f',
+            primary2: 'rgba(171, 239, 95, 0.5)',
+            background: '#f4f4f4',
+            background2: 'rgba(255, 255, 255, 0)',
+            background3: 'rgba(171, 239, 95, 0.2)',
+            dark1: '#212121',
+            dark2: '#494949',
+            dark3: '#737373',
+            dark4: '#1c1c1c',
+            lighter: '#e9e9e9',
           },
-        }
-      </script>
+          fontFamily: {
+            Manrope: 'Manrope',
+          },
+        },
+      },
+    }
+  </script>
 </head>
 
 <body class="font-Manrope bg-background">
-    <header class="bg-gradient-to-b from-background2 to-white">
-       <!-- navigation bar start -->
-      <div class="container mx-auto px-5 xl:px-14 2xl:px-44 md:pt-7">
-        <nav>
-         <div class="navbar justify-between px-0">
-           <div class="navbar-start w-1/3">
-             <div class="w-8 h-8 border border-lighter rounded-full bg-primary flex items-center justify-center mr-2">
-               <i class="fa-solid fa-arrow-right-long -rotate-45 text-dark1"></i>
-             </div> 
-             <a class="text-[28px] xl:text-[32px] font-extrabold text-dark1"> Rinterio</a>
-           </div>
-           <div class="navbar-center hidden lg:flex">
-             <ul class="menu menu-horizontal px-1">
-               <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
-               <li><a class="text-dark3 text-base">Service</a></li>
-               <li><a class="text-dark3 text-base">Portfolio</a></li>
-               <li><a class="text-dark3 text-base">Blogs</a></li>
-               <li><a class="text-dark3 text-base">Contact</a></li>
-             </ul>
-           </div>
-           <div class="navbar-end md:w-3/4 xl:w-3/6">
-             <div class="rounded-full bg-white border border-lighter hidden md:flex items-center justify-center px-3 py-3 text-dark3 mr-2 ">
-               <img src="./icons/search.svg" alt="">
-             </div>
-             <div class="rounded-full bg-white border border-lighter hidden md:flex items-center justify-center px-3 py-3 text-dark3 mr-2">
-               <img src="./icons/cart.svg" alt="">
-             </div>
-             <!-- button -->
-             <div class="hidden md:flex items-center bg-primary rounded-full py-3 px-5">
-               <a class="text-xl font-extrabold text-dark4"> Book Consult</a>
-             <div class="w-8 h-8 border border-lighter rounded-full bg-dark4 flex items-center justify-center ml-2">
-               <i class="fa-solid fa-arrow-right-long -rotate-45 text-white"></i>
-             </div> 
-             </div>
-             <!-- button end -->
-             <div class="dropdown lg:hidden">
-               <div tabindex="0" role="button" class="md:ml-4 rounded-3xl  text-dark3 py-3 px-4 bg-white border border-lighter">
-                 <i class="fa-solid fa-bars "></i>
-               </div>
-               <ul
-                 tabindex="0"
-                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 hidden p-2 shadow">
-                 <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
-                 <li><a class="text-dark3 text-base">Service</a></li>
-                 <li><a class="text-dark3 text-base">Portfolio</a></li>
-                 <li><a class="text-dark3 text-base">Blogs</a></li>
-                 <li><a class="text-dark3 text-base">Contact</a></li>
-               </ul>
-             </div>
-            
-           </div>
-         </div>
-        </nav>
+  <header class="bg-gradient-to-b from-background2 to-white pb-10 md:pb-16 lg:pb-24">
+    <!-- navigation bar start -->
+    <div class="container mx-auto px-5 xl:px-14 2xl:px-44 md:pt-7">
+      <nav>
+        <div class="navbar justify-between px-0">
+          <div class="navbar-start w-1/3">
+            <div class="w-8 h-8 border border-lighter rounded-full bg-primary flex items-center justify-center mr-2">
+              <i class="fa-solid fa-arrow-right-long -rotate-45 text-dark1"></i>
+            </div>
+            <a class="text-[28px] xl:text-[32px] font-extrabold text-dark1"> Rinterio</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
+              <li><a class="text-dark3 text-base">Service</a></li>
+              <li><a class="text-dark3 text-base">Portfolio</a></li>
+              <li><a class="text-dark3 text-base">Blogs</a></li>
+              <li><a class="text-dark3 text-base">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end md:w-3/4 xl:w-3/6">
+            <div
+              class="rounded-full bg-white border border-lighter hidden md:flex items-center justify-center px-3 py-3 text-dark3 mr-2 ">
+              <img src="./icons/search.svg" alt="">
+            </div>
+            <div
+              class="rounded-full bg-white border border-lighter hidden md:flex items-center justify-center px-3 py-3 text-dark3 mr-2">
+              <img src="./icons/cart.svg" alt="">
+            </div>
+            <!-- button -->
+            <div class="hidden md:flex items-center bg-primary rounded-full py-3 px-5">
+              <a class="text-xl font-extrabold text-dark4"> Book Consult</a>
+              <div class="w-8 h-8 border border-lighter rounded-full bg-dark4 flex items-center justify-center ml-2">
+                <i class="fa-solid fa-arrow-right-long -rotate-45 text-white"></i>
+              </div>
+            </div>
+            <!-- button end -->
+            <div class="dropdown lg:hidden">
+              <div tabindex="0" role="button"
+                class="md:ml-4 rounded-3xl  text-dark3 py-3 px-4 bg-white border border-lighter">
+                <i class="fa-solid fa-bars "></i>
+              </div>
+              <ul tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 hidden p-2 shadow">
+                <li><a class="text-dark2 text-base font-extrabold">Home</a></li>
+                <li><a class="text-dark3 text-base">Service</a></li>
+                <li><a class="text-dark3 text-base">Portfolio</a></li>
+                <li><a class="text-dark3 text-base">Blogs</a></li>
+                <li><a class="text-dark3 text-base">Contact</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- navigation bar end -->
+    <!-- banner section start here -->
+    <div class="container mx-auto px-5 xl:px-14 2xl:px-44 mt-6">
+      <div class="hero">
+        <div class="hero-content text-center px-0">
+          <div>
+            <img class="w-3/5 mx-auto" src="./assets/banner.png" alt="">
+            <h1
+              class="text-[28px] md:text-4xl lg:text-[64px] lg:leading-tight font-extrabold text-dark1 tracking-tight">A
+              barn house of this design has a striking appearance</h1>
+            <p class="md:w-4/5 text-sm md:text-base leading-6 md:leading-7 text-dark2 mx-auto py-6">
+              A barn house typically features a rustic, rectangular structure with a steeply pitched roof, wooden
+              siding, and large doors, exuding a charming, countryside appeal. Its open interiors.
+            </p>
+            <!-- button -->
+            <div
+              class="md:w-fit flex items-center justify-center bg-primary2 rounded-full py-[10px] md:py-3 px-6 space-x-2 mx-auto border-2 border-primary mt-2">
+              <a class="text-xl text-dark1 font-extrabold ">View Details</a>
+              <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2">
+                <i class="fa-solid fa-arrow-right-long -rotate-45 text-dark1"></i>
+              </div>
+            </div>
+            <!-- button end -->
+            <!-- <button class="btn btn-primary">Get Started</button> -->
+          </div>
+        </div>
       </div>
-        <!-- navigation bar end -->
-         <!-- banner section start here -->
-          <div class="container mx-auto px-5 xl:px-14 2xl:px-44">
-            <div class="hero">
-              <div class="hero-content text-center px-0">
-                <div class="">
-                  <img class="w-3/5 mx-auto" src="./assets/banner.png" alt="">
-                  <h1 class="text-[28px] md:text-4xl lg:text-[64px] lg:leading-normal font-[900] text-dark1">A barn house of this design has a striking appearance</h1>
-                  <p class="py-6 text-sm md:text-base leading-6 md:leading-7 text-dark2">
-                    A barn house typically features a rustic, rectangular structure with a steeply pitched roof, wooden siding, and large doors, exuding a charming, countryside appeal. Its open interiors and exposed beams create a warm, inviting atmosphere.
-                  </p>
-                  <!-- button -->
-                  <div class="md:w-fit flex items-center justify-center bg-primary2 rounded-full py-[10px] md:py-3 px-6 space-x-2 mx-auto border-2 border-primary mt-2">
-                    <a class="text-xl text-dark1 font-extrabold ">View Details</a>
-                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-2">
-                    <i class="fa-solid fa-arrow-right-long -rotate-45 text-dark1"></i>
-                  </div> 
-                  </div>
-                  <!-- button end -->
-                  <!-- <button class="btn btn-primary">Get Started</button> -->
-                </div>
+    </div>
+    <!-- banner section end here -->
+  </header>
+  <main>
+    <!-- we design thoughtful section start -->
+    <section class="lg:pt-5 pt-8 md:pt-16 ">
+      <!-- 0 -->
+     <div class="container mx-auto px-5 xl:px-14 2xl:px-44">
+      <div class="relative">
+        <div class="hidden h-20 lg:block container">
+          <img class="absolute -left-12 -bottom-1/4" src="./assets/Vector.png" alt="">
+        </div>
+      </div>
+      <!-- 0 -->
+      <div class=" md:pt-7 lg:flex items-center gap-[37px]">
+        <div class="lg:w-1/2 ">
+          <!-- arrow image -->
+          <div class="relative">
+            <div class="bg-white w-fit mx-auto lg:mx-0 rounded-full space-x-2 px-4 py-2 font-bold text-dark2 ">
+              <i class="fa-solid fa-arrow-right text-dark2"></i>
+              <span>About Us</span>
+            </div>
+          </div>
+          <!-- title  -->
+          <div class="text-center lg:text-left mt-4 space-y-4">
+            <h2 class="text-dark1 font-extrabold text-2xl md:text-3xl lg:text-4xl">We design thoughtful, liveable spaces
+            </h2>
+            <p class="text-dark2">We craft spaces that blend functionality with comfort, creating environments that feel
+              both thoughtful and livable.</p>
+          </div>
+          <!-- commercial card  -->
+          <div class=" md:flex lg:flex-col gap-6 mt-6 ">
+            <!-- 1 -->
+            <div class="flex lg:items-center bg-white px-5 py-5 lg:px-6 lg:py-6 rounded-2xl">
+              <div>
+                <img class="w-full lg:w-32" src="./assets/commercial.png" alt="Commercial" />
+              </div>
+              <div class=" ml-6 space-y-2">
+                <h2 class="text-base md:text-xl font-extrabold text-dark2">Commercial</h2>
+                <p class="text-dark3 leading-tight">We design innovative commercial buildings that combine modern
+                  aesthetics with</p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex lg:items-center bg-white px-5 py-5 lg:px-6 lg:py-6 mt-6 md:mt-0 rounded-2xl">
+              <div>
+                <img class="w-full lg:w-32" src="./assets/residential.png" alt="Commercial" />
+              </div>
+              <div class=" ml-6 space-y-2">
+                <h2 class="text-base md:text-xl font-extrabold text-dark2">Residential</h2>
+                <p class="text-dark3 leading-tight">We create residential buildings that offer comfort, style, and a
+                  sense of home.</p>
               </div>
             </div>
           </div>
-         <!-- banner section end here -->
- 
-        
-     
-    </header>
-    <main>
+          <!--  -->
+        </div>
+        <!--  -->
+        <div class="lg:w-1/2 mt-6 lg:mt-0">
+          <img class="mx-auto w-full" src="./assets/Rectangle.png" alt="">
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- -->
+    <!-- we design thoughtful section end -->
+    <!-- Numbering card section start -->
+    <!-- <section>
 
-    </main>
-    <footer>
+     </section>will do later -->
+    <!-- Numbering card section end -->
+    <!-- work progress section start  -->
+    <section class="container mx-auto px-5 xl:px-14 2xl:px-44 my-8 md:my-24">
+      <!-- title subtitle -->
+      <div class="bg-white w-fit mx-auto rounded-full space-x-2 px-4 py-2 font-bold text-dark2 ">
+        <i class="fa-solid fa-arrow-right text-dark2"></i>
+        <span>How we works</span>
+      </div>
+      <div class="w-full lg:w-6/12 mx-auto text-center mt-4 space-y-4">
+        <h2 class="text-dark1 font-extrabold text-2xl md:text-3xl lg:text-4xl">Our Works Process
+        </h2>
+        <p class="text-dark2">Our work process is streamlined, collaborative, and detail-oriented, ensuring each project
+          is executed with precision and creativity.</p>
+      </div>
+      <!-- title subtitle end -->
+       <!-- work process cards  -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <!-- card 1 -->
+          <div class="card bg-[#E7C1D3]">
+            <div class="card-body space-y-[10px] p-6">
+              <img class="w-12" src="./assets/concept.png" alt="">
+              <h2 class="card-title text-xl font-extrabold text-dark1">Concept</h2>
+              <p class="font-medium text-dark2">Work process is built on a foundation of clear concepts, meticulous planning.</p>
+            </div>
+          </div>
+        <!-- card 2 -->
+          <div class="card bg-[#EFDA6E]">
+            <div class="card-body space-y-[10px] p-6">
+              <img class="w-12" src="./assets/flow-chart.png" alt="">
+              <h2 class="card-title text-xl font-extrabold text-dark1">Concept</h2>
+              <p class="font-medium text-dark2">Work process is built on a foundation of clear concepts, meticulous planning.</p>
+            </div>
+          </div>
+        <!-- card 3 -->
+          <div class="card bg-[#A4DAC3]">
+            <div class="card-body space-y-[10px] p-6">
+              <img class="w-12" src="./assets/budget-planning.png" alt="">
+              <h2 class="card-title text-xl font-extrabold text-dark1">Concept</h2>
+              <p class="font-medium text-dark2">Work process is built on a foundation of clear concepts, meticulous planning.</p>
+            </div>
+          </div>
+        <!-- card 4 -->
+          <div class="card bg-[#77AAEA]">
+            <div class="card-body space-y-[10px] p-6">
+              <img class="w-12" src="./assets/concept.png" alt="">
+              <h2 class="card-title text-xl font-extrabold text-dark1">Concept</h2>
+              <p class="font-medium text-dark2">Work process is built on a foundation of clear concepts, meticulous planning.</p>
+            </div>
+          </div>
+         
+      </div>
+    </section>
+    <!-- work progress section end  -->
 
-    </footer>
-    
+     <!-- our latest Portfolio section start  -->
+    <section class="container mx-auto px-5 xl:px-14 2xl:px-44">
+       <!-- title subtitle -->
+       <div class="bg-background3 w-fit mx-auto rounded-full space-x-2 px-4 py-2 font-bold text-dark2 ">
+        <i class="fa-solid fa-arrow-right text-dark2"></i>
+        <span>Explore our Latest works</span>
+      </div>
+      <div class="w-full lg:w-6/12 mx-auto text-center mt-4 space-y-4">
+        <h2 class="text-dark1 font-extrabold text-2xl md:text-3xl lg:text-4xl">Our Latest Portfolio
+        </h2>
+        <p class="text-dark2">Our Portfolio showcases a diverse range of projects that reflect our commitment to innovation, quality, and design excellence..</p>
+      </div>
+      <!-- title subtitle end -->
+
+
+    </section>
+    <!-- our latest Portfolio section start  -->
+  </main>
+  <footer>
+
+  </footer>
+
 </body>
+
 </html>
